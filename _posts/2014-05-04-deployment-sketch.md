@@ -45,7 +45,7 @@ Vagrant also shares the folder where the code is with the Django server, so it c
 The developer edits the code, Django detects the change and reload the server.
 
 <figure>
-    <img src="/images/deployment-sketch.png">
+    <img src="{{ site.baseurl }}/images/deployment-sketch.png">
     <figcaption>Main components of the deployment based on Vagrant and Docker.</figcaption>
 </figure>
 
