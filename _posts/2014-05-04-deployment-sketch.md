@@ -151,3 +151,11 @@ The original deployment strategy relies on 2 files:
 The script `biostar.sh` is the entry point of the deployment. What I have done so far is completely compatible with the original deployment strategy, but if we really mean to switch to a new strategy based on Vagrant and Docker, there is no more need of this script.
 
 The file `default.env` contains environment variables. Django experts recommend to use environment variables for passwords and to set the location of the main settings file. Any other setting should be included in the settings file. According to this recommendation, `default.env` seems to be overused, it contains f.i. `BIOSTAR_ADMIN_EMAIL` and `DATABASE_NAME`. We could review this and follow the guideline: one requirement file and one settings file and one environment vars file for each environment (development, staging, production).
+
+<hr>
+
+# Interesting Articles and Tools
+
+- <http://marceldegraaf.net/2014/04/24/experimenting-with-coreos-confd-etcd-fleet-and-cloudformation.html>
+- <http://docs.docker.io/installation/mac/>
+- <http://www.vagrantup.com/blog/feature-preview-vagrant-1-6-docker-dev-environments.html>
