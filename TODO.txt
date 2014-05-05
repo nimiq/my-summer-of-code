@@ -1,1 +1,4 @@
 - favicons for mobile etc, ... see source code of any page
+- google analytics
+- biostar logo
+- twitter share does not include links
