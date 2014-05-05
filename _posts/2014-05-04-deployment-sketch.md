@@ -2,7 +2,7 @@
 layout: post
 title: Deployment Sketch
 description: "Attempt to improve the deployment of Neurostars using Vagrant and Docker"
-modified: 2014-05-04 22:53:46 +0200
+modified: 2014-05-05 09:55:46 +0200
 tags: [deployment, vagrant, docker]
 image:
   feature: 
@@ -13,6 +13,25 @@ share: true
 ---
 
 One of my first activities for *Neurostars* will be improving the deployment strategy. I have been working on it for a week end and produced a sketch. There is still a lot to do, so this is nothing more than a starting point.
+
+**Table of Contents**
+
+- [How To Deploy To A Local Development Env](#how-to-deploy-to-a-local-development-env)
+- [Overview](#overview)
+- [Details](#details)
+  - [Requirements For A Development Environment](#requirements-for-a-development-environment)
+  - [Docker](#docker)
+    - [Container 1: PostgreSQL](#container-1-postgresql)
+    - [Container 2: Web Server](#container-2-web-server)
+  - [Vagrant](#vagrant)
+- [Open Issues](#open-issues)
+  - [1. Django Console](#django-console)
+  - [2. Vagrant up --provision](#vagrant-up---provision)
+  - [3. Full Text Search Engine](#full-text-search-engine)
+  - [4. Python virtualenvironment](#python-virtualenvironment)
+  - [5. NFS in Vagrant](#nfs-in-vagrant)
+  - [6. Review of general deployment strategy](#review-of-general-deployment-strategy)
+
 
 # How To Deploy To A Local Development Env
 - Fork [Biostar repository](https://github.com/ialbert/biostar-central) on Github.  
