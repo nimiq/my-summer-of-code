@@ -5,13 +5,21 @@ Fork this repo in GitHub, then:
     $ mkdir myblog
     $ cd myblog
     $ git clone https://github.com/<my_username>/my-summer-of-code.git .
-Choose the right Ruby
+
+Choose the right Ruby:
+
     $ $ rvm use 2.1.1
-Install bundler (if not installed already)
+
+Install bundler (if not installed already):
+
     $ gem install bundler
+
 Install al dependencies:
+
     $ bundle install
-Build and run
+
+Build and run:
+
     $ jekyll build && jekyll serve
 
 
@@ -45,7 +53,7 @@ In _config.yml:
 - replace in any file: site.url  
     `with: site.baseurl`
 - rebuild:  
-    `$ grunt recess`
+    `$ grunt recess`  
     `$ jekyll buil`
 - run:  
     `$ jekyll serve --baseurl ''`
