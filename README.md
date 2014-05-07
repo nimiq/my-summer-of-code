@@ -8,7 +8,7 @@ Fork this repo in GitHub, then:
 
 Choose the right Ruby:
 
-    $ $ rvm use 2.1.1
+    $ rvm use 2.1.1
 
 Install bundler (if not installed already):
 
