@@ -106,7 +106,7 @@ This is also convenient because every time the container is run, which happens a
 ## Vagrant
 Vagrant uses a special [Docker provisioner](https://docs.vagrantup.com/v2/provisioning/docker.html). This provisioner automatically installs Docker in the VM and builds the containers. It also takes care of running the containers when the VM is launched.
 
-<hr>
+---
 
 # Open Issues
 
@@ -153,7 +153,7 @@ The script `biostar.sh` is the entry point of the deployment. What I have done s
 
 The file `default.env` contains environment variables. Django experts recommend to use environment variables for passwords and to set the location of the main settings file. Any other setting should be included in the settings file. According to this recommendation, `default.env` seems to be overused, it contains f.i. `BIOSTAR_ADMIN_EMAIL` and `DATABASE_NAME`. We could review this and follow the guideline: one requirement file and one settings file and one environment vars file for each environment (development, staging, production).
 
-<hr>
+---
 
 # Interesting Articles and Tools
 
