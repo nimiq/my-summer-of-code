@@ -26,7 +26,6 @@ Build and run:
 GRUNT
 =====
 Grunt is a tool to compile less files, minimize css and optimize images.
-You can use it also to generate templates for new posts or pages.
 
 Grunt requires Node.js.
 Download Node.js from http://nodejs.org/ and install it, then:
@@ -76,7 +75,7 @@ Or rebuild everything with:
 ADDING POSTS
 ============
 You can copy/paste posts.  
-Or you can use Grunt.
+Or you can use Rake.
 
     $ rake new_post
     $ rake new_page

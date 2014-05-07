@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GSoC Proposal"
+title: "My GSoC Proposal"
 description: "The original submitted proposal."
 link: https://docs.google.com/document/d/1yBkXf29MP_Hjc7G7Ayd30iL6z7-1aLA53j7ezLQuPXk/edit?usp=sharing
 modified: 2014-05-05 11:14:40 +0200
