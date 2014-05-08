@@ -1,4 +1,5 @@
-- favicons for mobile etc, ... see source code of any page
+- favicon: change to brain
+favicons for mobile etc, ... see source code of any page
 - google analytics
-- biostar logo
+- logo fro small display
 - twitter share does not include links
