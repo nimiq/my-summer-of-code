@@ -1,3 +1,2 @@
 - favicon: change to brain
 favicons for mobile etc, ... see source code of any page
-- twitter share does not include links
