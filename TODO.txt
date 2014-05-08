@@ -1,5 +1,3 @@
 - favicon: change to brain
 favicons for mobile etc, ... see source code of any page
-- google analytics
-- logo fro small display
 - twitter share does not include links
