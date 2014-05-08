@@ -34,9 +34,10 @@
         <span class="social-share-facebook">
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.baseurl }}{{ page.url }}" title="Share on Facebook" itemprop="Facebook"><i class="icon-facebook-sign"></i> Share</a></span>
         <span class="social-share-twitter">
-            <a href="https://twitter.com/intent/tweet?hashtags={{ page.categories | join: ',' }}&text={{ page.title }}&url={{ site.baseurl }}{{ page.url }}&via={{ site.owner.twitter }}" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
+            <!-- The actual URL at ethe end of HREF will be added via Javascript -->
+            <a href="https://twitter.com/intent/tweet?hashtags={{ page.categories | join: ',' }}&text={{ page.title }}&via={{ site.owner.twitter }}&url=" title="Share on Twitter" itemprop="Twitter"><i class="icon-twitter-sign"></i> Tweet</a></span>
         <span class="social-share-googleplus">
-            <a href="https://plus.google.com/share?url={{ site.baseurl }}{{ page.url }}" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
+            <a href="https://plus.google.com/share?url=" title="Share on Google Plus" itemprop="GooglePlus"><i class="icon-google-plus-sign"></i> +1</a></span>
             <!-- /.social-share -->{% endif %}
       </footer>
       <div class="entry-content">
@@ -62,14 +63,6 @@
 </div><!-- /.footer-wrapper -->
 
 {% include scripts.html %}	        
-
-        <script type="text/javascript">
-            $(document).ready(function() { 
-                //$("#domain").text(document.domain);
-                //$("#domain").text(location.host);
-                $("#domain").text(window.location);
-            });
-        </script>
 
 </body>
 </html>
