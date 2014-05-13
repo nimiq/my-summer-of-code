@@ -3,6 +3,7 @@ description:      My adventures with <a href="http://neurostars.org">Neurostars<
 logo:             site-logo.png
 disqus_shortname: mysummerofcode
 search:           true
+feeds:             true
 # Change url to your domain. Leave localhost server or blank when working locally.
 #url:              http://localhost:4000
 baseurl:          /my-summer-of-code
@@ -36,6 +37,8 @@ bing_verify:
 links:
   - title: Articles
     url: /articles/
+  - title: Tags
+    url: /tags/
   - title: About
     url: /about/
   - title: Neurostars

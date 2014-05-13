@@ -11,4 +11,5 @@
     {% endcomment %}
     {% if site.owner.github %}<a href="http://github.com/{{ site.owner.github }}" title="{{ site.owner.name}} on Github" target="_blank"><i class="icon-github icon-2x"></i></a>{% endif %}
 	{% if site.owner.linkedin %}<a href="http://linkedin.com/in/{{ site.owner.linkedin }}" title="{{ site.owner.name}} on LinkedIn" target="_blank"><i class="icon-linkedin icon-2x"></i></a>{% endif %}
+    {% if site.feeds %}<a href="{{ site.baseurl }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss icon-2x"></i></a>{% endif %}
 </div><!-- /.social-icons -->
