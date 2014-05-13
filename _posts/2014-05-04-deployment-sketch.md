@@ -33,6 +33,7 @@ One of my first activities for *Neurostars* will be improving the deployment str
   - [6. Review of general deployment strategy](#review-of-general-deployment-strategy)
 - [Interesting Articles and Tools](#interesting-articles-and-tools)
 
+---
 
 # How To Deploy To A Local Development Env
 - Fork [Biostar repository](https://github.com/ialbert/biostar-central) on Github.  
