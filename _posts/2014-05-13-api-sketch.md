@@ -38,11 +38,11 @@ Building a [RESTful API](http://en.wikipedia.org/wiki/RESTful_API) will probably
     - [Possible Improvements](#possible-improvements-1)
 - [API In Biostar 2](#api-in-biostar-2)
   - [Ideas](#ideas)
-    - [a. Questions](#a-questions)
-    - [b. Answers](#b-answers)
-    - [c. Comments](#c-comments)
-    - [d. Search](#d-search)
-    - [e. Users](#e-users)
+    - [a. Questions Endpoint](#a-questions-endpoint)
+    - [b. Answers Endpoint](#b-answers-endpoint)
+    - [c. Comments Endpoint](#c-comments-endpoint)
+    - [d. Search Endpoint](#d-search-endpoint)
+    - [e. Users Endpoint](#e-users-endpoint)
     - [f. Authentication](#f-authentication)
     - [g. Versioning](#g-versioning)
     - [h. Semantic backend](#h-semantic-backend)
@@ -168,7 +168,7 @@ In the response we could use the fields `date_from` (day-0) and `date_until`.
 The cause is a name clash between the variable `json` and the module `json`.
 - \<days\> might be not user friendly.  
 *Istvan* pointed out that counting backwards from the current day seems to be simple to use, as it answers questions like: "What was posted ten days ago?". But this makes life harder for people who want to mine our system periodically. He suggests to count forward from day-0.  
-I guess we could accept 3 exclusive parameters:
+I guess we could accept 3 mutually exclusive parameters:
     - `until` to provide stats from day-0 until `until`.
     - `days_ago` to provide stats from day-0 until `days_ago` days ago.
     - `days_from_zero` to provide stats from day-0 until day-0 + `days_from_zero`.  
@@ -189,29 +189,29 @@ Porting Biostar 1 API to Biostar 2 should be not too hard but my impression is t
 
 Apart from the possible improvements I've already mentioned above, we could consider some of the followings.
 
-### a. Questions
+### a. Questions Endpoint
 - Get the most recent questions (filtering by id, date, tags, author, popularity, unanswered status, votes, bookmarks).
 - Create/edit a question.
 - Delete a question I have authored.
 - Vote/bookmark a question.
 
-### b. Answers
+### b. Answers Endpoint
 - Get the most recent answers (filtering by id, question, date, author, votes, bookmarks).
 - Create/edit a answer.
 - Delete a answer I have authored.
 - Vote/bookmark a answer.
 - Accept/refuse answers if I'm the author of the question.
 
-### c. Comments
+### c. Comments Endpoint
 - Get the most recent comments (filtering by id, question, answers, date, author, votes).
 - Create/edit a comment.
 - Vote a comment.
 
-### d. Search
+### d. Search Endpoint
 - Search for posts (questions, answers, comments) meeting certain criteria.
 - Search for similar questions.
 
-### e. Users
+### e. Users Endpoint
 - Get users list.
 - Get user profile.
 - Get posts (questions, answers, comments) authored by a user ordered by date or popularity (votes, views, answers).
