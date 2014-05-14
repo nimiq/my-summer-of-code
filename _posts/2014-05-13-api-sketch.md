@@ -80,7 +80,7 @@ Number of post views over the last 60 mins filtered by unique IPs.
 We could f.i. change the field `"traffic"` to `"post_views_last_60_mins"`.
 - Add minutes parameter: `GET api/traffic?min=5`.
 This returns the number of post views over the last 5 min filtered by unique IPs.
-- Improve the count algorithm.  
+- Improve the counting algorithm.  
 Users part of the same network infrastructure (like a office or a university) might share the same public IP, so the number provided might be underestimated.  
 We could improve this algorithm by counting post visits of unique logged users plus post visits of anonymous users filtered by unique IPs.
 
