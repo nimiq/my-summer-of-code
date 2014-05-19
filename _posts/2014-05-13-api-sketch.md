@@ -15,6 +15,8 @@ share: true
 
 Building a [RESTful API](http://en.wikipedia.org/wiki/RESTful_API) will probably be my first activity for Neurostars: it is a good opportunity for me to get an overview of the codebase. Some work have already been done in *Biostar 1* and that could be the starting point.
 
+---
+
 **Table of Contents**
 
 - [API In Biostar 1](#api-in-biostar-1)

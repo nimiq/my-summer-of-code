@@ -14,6 +14,8 @@ share: true
 
 One of my first activities for *Neurostars* will be improving the deployment strategy. I have been working on it for a week end and produced a sketch. There is still a lot to do, so this is nothing more than a starting point.
 
+---
+
 **Table of Contents**
 
 - [How To Deploy To A Local Development Env](#how-to-deploy-to-a-local-development-env)
