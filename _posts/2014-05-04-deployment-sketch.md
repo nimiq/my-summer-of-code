@@ -163,3 +163,4 @@ The file `default.env` contains environment variables. Django experts recommend 
 - <http://marceldegraaf.net/2014/04/24/experimenting-with-coreos-confd-etcd-fleet-and-cloudformation.html>
 - <http://docs.docker.io/installation/mac/>
 - <http://www.vagrantup.com/blog/feature-preview-vagrant-1-6-docker-dev-environments.html>
+- <http://blog.docker.io/2014/02/docker-0-8-quality-new-builder-features-btrfs-storage-osx-support/>
