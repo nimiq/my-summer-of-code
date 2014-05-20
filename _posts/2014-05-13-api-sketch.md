@@ -75,11 +75,11 @@ The available methods are:
 {% endhighlight %}
 
 ### Description
-Number of post views over the last 60 mins filtered by unique IPs.
+Number of post views over the last 60 min filtered by unique IPs.
 
 ### Possible Improvements
 - Clearly state the units of measurement.  
-We could f.i. change the field `"traffic"` to `"post_views_last_60_mins"`.
+We could f.i. change the field `"traffic"` to `"post_views_last_60_min"`.
 - Add minutes parameter: `GET api/traffic?min=5`.
 This returns the number of post views over the last 5 min filtered by unique IPs.
 - Improve the counting algorithm.  
