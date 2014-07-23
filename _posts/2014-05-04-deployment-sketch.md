@@ -90,7 +90,7 @@ When this container is **built**, PostgreSQL 9.3 server is installed and configu
 When this container is **run**, PostgreSQL is launched and the port 5432 exposed.
 
 ### Container 2: Web Server
-*Note: we are temporary using Django integrate server in this sketch.*
+*Note: we are temporary using Django integrated server in this sketch.*
 The second Docker container is a Ubuntu 14.04 machine with a more complex configuration.
 When this container is **built**, Python is installed.
 When this container is **run**:
