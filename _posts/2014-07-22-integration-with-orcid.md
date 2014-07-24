@@ -22,6 +22,20 @@ We would like to integrate ORCID in Neurostars, providing two new features:
 
 This post is mainly about the first point.
 
+---
+
+**Table of Contents**
+
+- [OAuth](#oauth)
+- [Public vs member ORCID API](#public-vs-member-orcid-api)
+- [Sandbox vs production ORCID API](#sandbox-vs-production-orcid-api)
+- [Client apps registration](#client-apps-registration)
+- [OAuth Flow](#oauth-flow)
+- [Fetching bio](#fetching-bio)
+- [Response](#response)
+- [Open Issues](#open-issues)
+
+---
 
 OAuth
 =====
