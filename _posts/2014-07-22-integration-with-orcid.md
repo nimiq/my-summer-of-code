@@ -139,13 +139,17 @@ Users bio have the following form:
     "orcid-profile": {
         "orcid-bio": {
             "personal-details": {
+                "credit-name": {
+                    "visibility": "PUBLIC",
+                    "value": "J. Doe"
+                },
                 "given-names": {
                     "value": "John"
                 },
                 "other-names": {
                     "other-name": [
                         {
-                            "value": "JDoe"
+                            "value": "Jonathan Doe"
                         }
                     ],
                     "visibility": "PUBLIC"
@@ -154,58 +158,130 @@ Users bio have the following form:
                     "value": "Doe"
                 }
             },
-            "delegation": null,
-            "applications": null,
-            "contact-details": {
-                "email": [],
-                "address": {
-                    "country": {
-                        "value": "AR",
-                        "visibility": "PUBLIC"
-                    }
-                }
-            },
-            "keywords": {
-                "keyword": [
+            "researcher-urls": {
+                "researcher-url": [
                     {
-                        "value": "basil"
-                    },
-                    {
-                        "value": "pizza"
+                        "url": {
+                            "value": "http://neurostars.org/u/46/"
+                        },
+                        "url-name": {
+                            "value": "My profile at Neurostars"
+                        }
                     }
                 ],
                 "visibility": "PUBLIC"
             },
-            "scope": null,
+            "delegation": null,
+            "applications": null,
             "biography": {
-                "value": "This is my bio",
-                "visibility": "PUBLIC"
+                "visibility": "PUBLIC",
+                "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id enim auctor, condimentum metus in, vestibulum erat. Integer ultrices diam vitae luctus egestas. Praesent vitae odio euismod, ultricies augue ac, gravida nibh. Ut nec nisi euismod, volutpat sem eu, tincidunt sem. Vivamus pharetra blandit purus ut consequat. Pellentesque convallis risus id leo pellentesque, a rutrum neque feugiat. Sed in metus quis sapien congue luctus. Nullam venenatis dui odio, quis molestie mauris posuere nec."
+            },
+            "keywords": {
+                "visibility": "PUBLIC",
+                "keyword": [
+                    {
+                        "value": "Fmri"
+                    },
+                    {
+                        "value": "Neuroscience"
+                    }
+                ]
+            },
+            "scope": null,
+            "contact-details": {
+                "email": [
+                    {
+                        "verified": false,
+                        "primary": true,
+                        "visibility": "LIMITED",
+                        "current": true,
+                        "source": "0000-0001-6796-198X",
+                        "value": "test@test123.com"
+                    }
+                ],
+                "address": {
+                    "country": {
+                        "visibility": "PUBLIC",
+                        "value": "AR"
+                    }
+                }
             }
         },
         "group-type": null,
+        "client-type": null,
+        "orcid-identifier": {
+            "path": "0000-0001-6796-198X",
+            "host": "sandbox.orcid.org",
+            "uri": "http://sandbox.orcid.org/0000-0001-6796-198X",
+            "value": null
+        },
         "orcid-activities": {
             "affiliations": null,
             "orcid-works": {
                 "scope": null,
                 "orcid-work": [
                     {
-                        "put-code": "394644",
+                        "language-code": "en",
+                        "put-code": "397501",
                         "work-title": {
-                            "subtitle": null,
+                            "subtitle": {
+                                "value": "Red ants alimentation in Africa"
+                            },
                             "title": {
-                                "value": "My paper title"
+                                "value": "Red ants alimentation"
+                            }
+                        },
+                        "country": {
+                            "visibility": "PUBLIC",
+                            "value": "AT"
+                        },
+                        "work-citation": {
+                            "citation": "Mycitation",
+                            "work-citation-type": "RIS"
+                        },
+                        "work-type": "JOURNAL_ARTICLE",
+                        "publication-date": {
+                            "month": {
+                                "value": "05"
+                            },
+                            "day": {
+                                "value": "01"
+                            },
+                            "media-type": null,
+                            "year": {
+                                "value": "2014"
                             }
                         },
                         "visibility": "PUBLIC",
-                        "work-type": "CONFERENCE_PAPER",
-                        "url": null,
+                        "journal-title": {
+                            "value": "Ants"
+                        },
+                        "work-external-identifiers": {
+                            "scope": null,
+                            "work-external-identifier": [
+                                {
+                                    "work-external-identifier-id": {
+                                        "value": "arxiv:asdasda:asdsd"
+                                    },
+                                    "work-external-identifier-type": "ARXIV"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "value": "http://myurl.com/mypaper"
+                        },
+                        "short-description": "And the description",
                         "work-contributors": {
                             "contributor": [
                                 {
-                                    "contributor-attributes": {},
+                                    "contributor-attributes": {
+                                        "contributor-role": "AUTHOR",
+                                        "contributor-sequence": "FIRST"
+                                    },
                                     "credit-name": {
-                                        "value": "John Doe",
-                                        "visibility": "PUBLIC"
+                                        "visibility": "PUBLIC",
+                                        "value": "J. Doe"
                                     }
                                 }
                             ]
@@ -221,10 +297,13 @@ Users bio have the following form:
             }
         },
         "orcid": null,
-        "client-type": null,
+        "type": "USER",
+        "orcid-preferences": {
+            "locale": "EN"
+        },
         "orcid-history": {
             "last-modified-date": {
-                "value": 1406058219693
+                "value": 1406404913990
             },
             "creation-method": "WEBSITE",
             "submission-date": {
@@ -235,16 +314,6 @@ Users bio have the following form:
             "claimed": {
                 "value": true
             }
-        },
-        "type": "USER",
-        "orcid-preferences": {
-            "locale": "EN"
-        },
-        "orcid-identifier": {
-            "path": "0000-0001-6796-198X",
-            "host": "sandbox.orcid.org",
-            "uri": "http://sandbox.orcid.org/0000-0001-6796-198X",
-            "value": null
         }
     }
 }
