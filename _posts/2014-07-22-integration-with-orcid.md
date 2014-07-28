@@ -140,7 +140,7 @@ Users bio have the following form:
         "orcid-bio": {
             "personal-details": {
                 "credit-name": {
-                    "visibility": "PUBLIC",
+                    "visibility": null,
                     "value": "J. Doe"
                 },
                 "given-names": {
@@ -152,7 +152,7 @@ Users bio have the following form:
                             "value": "Jonathan Doe"
                         }
                     ],
-                    "visibility": "PUBLIC"
+                    "visibility": null
                 },
                 "family-name": {
                     "value": "Doe"
@@ -169,22 +169,22 @@ Users bio have the following form:
                         }
                     }
                 ],
-                "visibility": "PUBLIC"
+                "visibility": null
             },
             "delegation": null,
             "applications": null,
             "biography": {
-                "visibility": "PUBLIC",
+                "visibility": null,
                 "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id enim auctor, condimentum metus in, vestibulum erat. Integer ultrices diam vitae luctus egestas. Praesent vitae odio euismod, ultricies augue ac, gravida nibh. Ut nec nisi euismod, volutpat sem eu, tincidunt sem. Vivamus pharetra blandit purus ut consequat. Pellentesque convallis risus id leo pellentesque, a rutrum neque feugiat. Sed in metus quis sapien congue luctus. Nullam venenatis dui odio, quis molestie mauris posuere nec."
             },
             "keywords": {
-                "visibility": "PUBLIC",
+                "visibility": null,
                 "keyword": [
                     {
-                        "value": "Fmri"
+                        "value": "Neuroscience"
                     },
                     {
-                        "value": "Neuroscience"
+                        "value": "fmri"
                     }
                 ]
             },
@@ -192,18 +192,18 @@ Users bio have the following form:
             "contact-details": {
                 "email": [
                     {
-                        "verified": false,
+                        "verified": true,
                         "primary": true,
-                        "visibility": "LIMITED",
+                        "visibility": null,
                         "current": true,
-                        "source": "0000-0001-6796-198X",
-                        "value": "test@test123.com"
+                        "source": "0000-0001-5429-1577",
+                        "value": "myemail@gmail.com"
                     }
                 ],
                 "address": {
                     "country": {
-                        "visibility": "PUBLIC",
-                        "value": "AR"
+                        "visibility": null,
+                        "value": "AF"
                     }
                 }
             }
@@ -211,9 +211,9 @@ Users bio have the following form:
         "group-type": null,
         "client-type": null,
         "orcid-identifier": {
-            "path": "0000-0001-6796-198X",
-            "host": "sandbox.orcid.org",
-            "uri": "http://sandbox.orcid.org/0000-0001-6796-198X",
+            "path": "0000-0001-5429-1577",
+            "host": "orcid.org",
+            "uri": "http://orcid.org/0000-0001-5429-1577",
             "value": null
         },
         "orcid-activities": {
@@ -222,56 +222,39 @@ Users bio have the following form:
                 "scope": null,
                 "orcid-work": [
                     {
-                        "language-code": "en",
-                        "put-code": "397501",
+                        "put-code": "13249405",
                         "work-title": {
-                            "subtitle": {
-                                "value": "Red ants alimentation in Africa"
-                            },
+                            "subtitle": null,
                             "title": {
-                                "value": "Red ants alimentation"
+                                "value": "Red ant in Somalia: a case study"
                             }
                         },
-                        "country": {
-                            "visibility": "PUBLIC",
-                            "value": "AT"
-                        },
-                        "work-citation": {
-                            "citation": "Mycitation",
-                            "work-citation-type": "RIS"
-                        },
-                        "work-type": "JOURNAL_ARTICLE",
+                        "visibility": null,
+                        "work-type": "CONFERENCE_PAPER",
                         "publication-date": {
                             "month": {
-                                "value": "05"
+                                "value": "02"
                             },
                             "day": {
-                                "value": "01"
+                                "value": "06"
                             },
                             "media-type": null,
                             "year": {
-                                "value": "2014"
+                                "value": "2012"
                             }
                         },
-                        "visibility": "PUBLIC",
-                        "journal-title": {
-                            "value": "Ants"
-                        },
+                        "url": null,
                         "work-external-identifiers": {
                             "scope": null,
                             "work-external-identifier": [
                                 {
                                     "work-external-identifier-id": {
-                                        "value": "arxiv:asdasda:asdsd"
+                                        "value": "arxiv:056985:4564"
                                     },
                                     "work-external-identifier-type": "ARXIV"
                                 }
                             ]
                         },
-                        "url": {
-                            "value": "http://myurl.com/mypaper"
-                        },
-                        "short-description": "And the description",
                         "work-contributors": {
                             "contributor": [
                                 {
@@ -287,9 +270,9 @@ Users bio have the following form:
                             ]
                         },
                         "work-source": {
-                            "path": "0000-0001-6796-198X",
-                            "host": "sandbox.orcid.org",
-                            "uri": "http://sandbox.orcid.org/0000-0001-6796-198X",
+                            "path": "0000-0001-5429-1577",
+                            "host": "orcid.org",
+                            "uri": "http://orcid.org/0000-0001-5429-1577",
                             "value": null
                         }
                     }
@@ -303,11 +286,11 @@ Users bio have the following form:
         },
         "orcid-history": {
             "last-modified-date": {
-                "value": 1406404913990
+                "value": 1406581351644
             },
             "creation-method": "WEBSITE",
             "submission-date": {
-                "value": 1405935036511
+                "value": 1406578397677
             },
             "visibility": null,
             "source": null,
