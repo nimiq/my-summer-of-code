@@ -312,4 +312,4 @@ Becoming a member probably means to pay [$5000](http://orcid.org/about/membershi
 
 So seems that we cannot implement the ORCID login feature in Neurostars without having a ORCID subscription. Of course we could use the Public API to fetch users bio, but we have to rely on what our users declare (by meaning that the Neurostars user Paolo could declare to be the ORCID user Guido van Rossum and we have no way to check that.)
 
-**BUT** this month Publish API [has been extended](http://support.orcid.org/knowledgebase/articles/335483) such that *"organizations can have users add an ORCID iD through an authenticated process that removes the risks of  having users type in an iD themselves"*. This needs further investigation.
+**BUT** this month Public API [has been extended](http://support.orcid.org/knowledgebase/articles/335483) such that *"organizations can have users add an ORCID iD through an authenticated process that removes the risks of  having users type in an iD themselves"*. This needs further investigation.
