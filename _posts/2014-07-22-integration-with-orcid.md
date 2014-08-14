@@ -2,7 +2,7 @@
 layout: post
 title: "Integration with ORCID"
 description: "Integrating ORCID in Neurostars"
-modified: 2014-07-23 23:20:34 +0200
+modified: 2014-08-10 23:50:34 +0200
 category: 
 tags: [orcid, api, oauth, django-allauth]
 image:
@@ -15,12 +15,10 @@ share: true
 
 *"[ORCID](http://orcid.org/) provides a persistent digital identifier that distinguishes you from every other researcher and, through integration in key research workflows such as manuscript and grant submission, supports automated linkages between you and your professional activities ensuring that your work is recognized."*
 
-We would like to integrate ORCID in Neurostars, providing two new features:
+We would like to integrate [ORCID](http://orcid.org/) in Neurostars, providing two new features:
 
-- Signup/login using a ORCID account (via OAuth)
-- Import data from a ORCID profile to a Neurostars profile
-
-This post is mainly about the first point.
+- Signup/login using a ORCID account (via OAuth);
+- Import data from a ORCID profile to a Neurostars profile.
 
 ---
 
@@ -31,9 +29,10 @@ This post is mainly about the first point.
 - [Sandbox vs production ORCID API](#sandbox-vs-production-orcid-api)
 - [Client apps registration](#client-apps-registration)
 - [OAuth Flow](#oauth-flow)
-- [Fetching bio](#fetching-bio)
+- [Fetching Profile Data](#fetching-profile-data)
 - [Response](#response)
-- [Open Issues](#open-issues)
+- [Profile Data Reuse Policy](#profile-data-reuse-policy)
+- [Conclusion](#conclusion)
 
 ---
 
@@ -50,9 +49,11 @@ There are two solid libraries we can use to integrate the OAuth protocol in Djan
 We decided to fork and extend the original **django-allauth** library and add the support for ORCID.
 
 
-Public vs member ORCID API
+Public vs Member ORCID API
 ==========================
 *"ORCID offers two APIs, the **Public API** which can be used by anyone to search the ORCID Registry and retrieve public information, and the Member API. The **Member API** is available only to ORCID members and allows them to authenticate researchers, access read-limited information, and edit ORCID records- as long as they have the researcher's permission."*
+
+*Public API* is a free read-only API with limited functionality, usable for the OAuth login process and to read users' profile data; *Member API* instead requires an organization account and a subscription with ORCID (so it is not free) and offers more functionalities (it can also write to ORCID on behalf of users).
 
 Reference:
 
@@ -61,7 +62,7 @@ Reference:
 - [Knowledge base](http://support.orcid.org/knowledgebase).
 
 
-Sandbox vs production ORCID API
+Sandbox vs Production ORCID API
 ===============================
 *"The ORCID **development sandbox** is designed to resemble the production Registry as closely as possible, the only notable differences are with with the Import Works function and that the sandbox does not send email messages to most email addresses. Occasionally, the sandbox will be one version ahead of the Production Registry to allow for API developer testing, when this happens we will notify the API Users Group."*
 
@@ -81,7 +82,7 @@ Reference:
 - [Create](https://sandbox.orcid.org/register) sandbox members.
 
 
-Client apps registration
+Client Apps Registration
 ========================
 Client apps must be registered [here](http://orcid.org/content/register-client-application).
 Consult the [guide](http://support.orcid.org/knowledgebase/articles/116739-register-a-client-application) first.
@@ -102,9 +103,9 @@ Reference and tools:
 - [Playground](http://support.orcid.org/knowledgebase/articles/154641-introduction-to-the-api-with-google-s-oauth-playgr) - [Direct link](https://developers.google.com/oauthplayground/#step3&url=https%3A//api.sandbox.orcid.org/&content_type=application/json&http_method=GET&useDefaultOauthCred=unchecked&oauthEndpointSelect=Custom&oauthAuthEndpointValue=https%3A//sandbox.orcid.org/oauth/authorize&oauthTokenEndpointValue=https%3A//api.sandbox.orcid.org/oauth/token&includeCredentials=unchecked&accessTokenType=bearer&autoRefreshToken=unchecked&accessType=offline&forceAprovalPrompt=checked&response_type=code).
 
 
-Fetching bio
-============
-A user's bio can be fetched via Public or Member API at the following urls: 
+Fetching Profile Data
+=====================
+Users' profile data can be fetched via Public or Member API at the following urls: 
 
 - Public API: `http://pub.sandbox.orcid.org/v1.1/<ID>/orcid-bio`
 - Member API: `https://api.sandbox.orcid.org/v1.1/<ID>orcid-profile`
@@ -131,7 +132,7 @@ Response
 }
 ~~~
 
-Users bio have the following form:
+Users' profile data have the following form:
 
 ~~~ json
 {
@@ -303,13 +304,24 @@ Users bio have the following form:
 ~~~
 
 
-Open Issues
-===========
-Both *Public API* and *Member API* can be used to access users bio.
-*Member API* only can be used to identify a user (so to signup/login in a third party website).
-In order to get an application for the production Member API, the organization needs to become member, as stated [here](http://support.orcid.org/knowledgebase/articles/180285-introduction-to-the-orcid-api#ProdCreds) and during the creating of a [new client app](http://orcid.org/content/register-client-application).
-Becoming a member probably means to pay [$5000](http://orcid.org/about/membership) per year.
+Profile Data Reuse Policy
+=========================
+I searched for reuse policies in Orcid.org and didn't find anything too clear, but still I understood the following.
+I, as a ORCID member, can specify the privacy settings for each piece of info in my account and there are 3 privacy settings:
 
-So seems that we cannot implement the ORCID login feature in Neurostars without having a ORCID subscription. Of course we could use the Public API to fetch users bio, but we have to rely on what our users declare (by meaning that the Neurostars user Paolo could declare to be the ORCID user Guido van Rossum and we have no way to check that.)
+- EVERYONE: *"can be viewed by anyone who comes to the ORCID.org website or consumed by anyone using the ORCID public API"*;
+- TRUSTED PARTIES: *"can be seen by any Trusted Parties that you have authorized to connect to your ORCID Record (Trusted Parties)"*;
+- ONLY ME: *"can only be seen by you"*.   
+[Source](http://support.orcid.org/knowledgebase/articles/124518-orcid-privacy-settings).
 
-**BUT** this month Public API [has been extended](http://support.orcid.org/knowledgebase/articles/335483) such that *"organizations can have users add an ORCID iD through an authenticated process that removes the risks of  having users type in an iD themselves"*. This needs further investigation.
+*Public API* can only read piece of info with *EVERYONE* setting, thus we of course have the right to read those data.
+
+Can we also reuse these data, by meaning f.i. displaying them in Neurostars?
+[This page](http://orcid.org/privacy-policy#Privacy_settings) states: *"The public will have free access to the [Public] data for viewing and use... Our Terms and Conditions of Use (for individuals) and our Membership Agreement (for Members) state that individual data Records may not be used in any manner that is defamatory or misleading; cannot be modified so as to make them false, incomplete, or misleading; are subject to your rights of publicity; and if any person or entity uses the data for marketing purposes, they must give you the right to opt-out of such communications. Although we post this notice, ORCID does not undertake the responsibility to police third party uses of data. If you object to a third-party use of your data, you should contact and make a complaint directly to the third party"*.
+
+So it seems that we can definitely reuse those data and they suggest us to respect some very reasonable [community norms](http://orcid.org/content/orcid-public-data-file-use-policy).
+
+
+Conclusion
+==========
+Using *Public API* we can build the social login and profiles data fetching features for ORCID users. We will first implement such features in [django-allauth](https://github.com/pennersr/django-allauth) and then we will integrate it in Neurostars.
