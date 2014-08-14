@@ -34,32 +34,32 @@ We have then used the updated django-allauth library to integrate ORCID as socia
 Screenshots:
 
 <figure>
-    <a href="/images/orcid-1.png">
-        <img src="/images/orcid-1.png">
+    <a href="{{ site.url }}/images/orcid-1.png">
+        <img src="{{ site.url }}/images/orcid-1.png">
     </a>
     <figcaption>Adding the ORCID social login provider.</figcaption>
 </figure>
 
 <br />
 <figure>
-    <a href="/images/orcid-2.png">
-        <img src="/images/orcid-2.png">
+    <a href="{{ site.url }}/images/orcid-2.png">
+        <img src="{{ site.url }}/images/orcid-2.png">
     </a>
     <figcaption>Authorizing Biostars (or Neurostars) to access the ORCID profile info.</figcaption>
 </figure>
 
 <br />
 <figure>
-    <a href="/images/orcid-3.png">
-        <img src="/images/orcid-3.png">
+    <a href="{{ site.url }}/images/orcid-3.png">
+        <img src="{{ site.url }}/images/orcid-3.png">
     </a>
     <figcaption>Asking to import ORCID profile info to Neurostars.</figcaption>
 </figure>
 
 <br />
 <figure>
-    <a href="/images/orcid-4.png">
-        <img src="/images/orcid-4.png">
+    <a href="{{ site.url }}/images/orcid-4.png">
+        <img src="{{ site.url }}/images/orcid-4.png">
     </a>
     <figcaption>The user profile after having imported the profile info.</figcaption>
 </figure>
