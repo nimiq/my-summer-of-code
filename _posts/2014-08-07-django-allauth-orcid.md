@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Adding ORCID provider to django-allauth"
+title: "Add ORCID Provider to django-allauth"
 description: "Adding ORCID OAuth provider to django-allauth for social login"
 modified: 2014-08-10 23:50:34 +0200
 category: 
@@ -31,35 +31,35 @@ We have then used the updated django-allauth library to integrate ORCID as socia
 - the user confirms and she is redirected back to Neurostars to a page which asks if she wants to use her ORCID bio as her Neurostars profile info;
 - the user might choose to ignore the question or confirm; if she confirms she is redirected to her profile page.
 
-Screenshots:
+Some screenshots:
 
 <figure>
-    <a href="{{ site.baseurl }}/images/orcid-1.png">
-        <img src="{{ site.baseurl }}/images/orcid-1.png">
+    <a href="{{ site.baseurl }}/images/2014-08-07-django-allauth-orcid/1.png">
+        <img src="{{ site.baseurl }}/images/2014-08-07-django-allauth-orcid/1.png">
     </a>
     <figcaption>Adding the ORCID social login provider.</figcaption>
 </figure>
 
 <br />
 <figure>
-    <a href="{{ site.baseurl }}/images/orcid-2.png">
-        <img src="{{ site.baseurl }}/images/orcid-2.png">
+    <a href="{{ site.baseurl }}/images/2014-08-07-django-allauth-orcid/2.png">
+        <img src="{{ site.baseurl }}/images/2014-08-07-django-allauth-orcid/2.png">
     </a>
     <figcaption>Authorizing Biostars (or Neurostars) to access the ORCID profile info.</figcaption>
 </figure>
 
 <br />
 <figure>
-    <a href="{{ site.baseurl }}/images/orcid-3.png">
-        <img src="{{ site.baseurl }}/images/orcid-3.png">
+    <a href="{{ site.baseurl }}/images/2014-08-07-django-allauth-orcid/3.png">
+        <img src="{{ site.baseurl }}/images/2014-08-07-django-allauth-orcid/3.png">
     </a>
     <figcaption>Asking to import ORCID profile info to Neurostars.</figcaption>
 </figure>
 
 <br />
 <figure>
-    <a href="{{ site.baseurl }}/images/orcid-4.png">
-        <img src="{{ site.baseurl }}/images/orcid-4.png">
+    <a href="{{ site.baseurl }}/images/2014-08-07-django-allauth-orcid/4.png">
+        <img src="{{ site.baseurl }}/images/2014-08-07-django-allauth-orcid/4.png">
     </a>
     <figcaption>The user profile after having imported the profile info.</figcaption>
 </figure>
