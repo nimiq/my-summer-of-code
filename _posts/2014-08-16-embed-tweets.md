@@ -13,9 +13,9 @@ comments: true
 share: true
 ---
 
-Biostar and Neurostars provide a cool feature related to post editing: users can easily add links to other posts and users and embed snippets of code from Gist and videos from YouTube.
+Biostar and Neurostars provide a cool feature related to post editing: users can easily add links to other *posts* and *users* and embed snippets of code from *Gist* and videos from *YouTube*.
 
-Today I implemented the support for tweets from twitter. This feature will be soon deployed to live.
+Today I implemented the support for tweets from *Twitter*. This feature will be soon deployed to live.
 
 Some screenshot from our preview website:
 
