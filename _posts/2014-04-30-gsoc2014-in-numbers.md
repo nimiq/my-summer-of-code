@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GSoC2014 In Numbers"
+title: "GSoC2014 in Numbers"
 description: "GSoC 2014 in numbers."
 modified: 2014-04-30 23:02:28 +0200
 link: http://google-opensource.blogspot.in/2014/04/students-announced-for-google-summer-of.html?view=classic
